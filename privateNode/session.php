@@ -11,6 +11,7 @@
     $_SESSION['nickname']='';
     $_SESSION['admin']=false;
     $_SESSION['moderator']=false;
+    $_SESSION['miniatura']='anon.png';
   }
   if(isset($_SESSION['info'])){
     $info=$_SESSION['info'];

@@ -50,7 +50,13 @@
       <?php
       if($_SESSION["logged"]==true)
       {
-
+        echo '<li><a href="logout.php"><span class="glyphicon glyphicon-lock"></span> Wyloguj</a></li>';
+        if($_SERVER['PHP_SELF']=="/stronkaMemka/profil.php")
+        {
+          echo '<li class="active"><a href="profil.php" style="padding:1px;"><img href="profil.php" class="img-circle" height="48" src="'.$_SESSION["miniatura"].'" alt="miniaturka"></a></li>';
+        }else {
+          echo '<li><a href="profil.php" style="padding:0;"><img href="profil.php" class="img-circle" height="48" src="'.$_SESSION["miniatura"].'" alt="miniaturka"></a></li>';
+        }
       }else{
         if($_SERVER['PHP_SELF']=="/stronkaMemka/rejestracja.php")
         {
@@ -69,6 +75,12 @@
     </ul>
   </div>
 </nav>
+<?php
+  if($_SESSION["logged"]==true)
+  {
+    echo '<div id="loggedShift"></div>';
+  }
+?>
 <div id="shift" style="display: none;"></div>
 <script>
 $(document).ready(function(){
