@@ -1,0 +1,42 @@
+body {
+  padding-top: 70px;
+  background-color: #333333;
+  color: #f2f2f2;
+  text-shadow: 1px 1px black;
+}
+.darker{
+  background-color:#666666;
+  margin-bottom: 5px;
+  border-radius: 15px;
+  border: 1px solid #111111;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.lighter{
+ background-color:#999999;
+ margin-bottom: 5px;
+ border-radius: 15px;
+ border: 1px solid #111111;
+ padding-left: 20px;
+ padding-right: 20px;
+ padding-top: 10px;
+ padding-bottom: 10px;
+}
+#shift{
+  padding-top:0px;
+}
+@media screen and (max-width: 895px) {
+ #shift{
+   padding-top:40px;
+ }
+}
+@media screen and (max-width: 767px) {
+  body {
+    padding-top: 280px;
+ }
+ #shift{
+   padding-top:72px;
+ }
+}
