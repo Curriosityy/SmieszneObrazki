@@ -9,7 +9,7 @@
     <div class="container" >
       <div class="row">
         <div class="darker">
-            <form class="form-horizontal" action="login.php" method="post">
+            <form class="form-horizontal" action="scripts/login.php" method="post">
               <div class="form-group">
                 <label class="control-label col-sm-2">Login:</label>
                 <div class="col-sm-8">
