@@ -3,7 +3,7 @@
 
   if($_SERVER['REQUEST_METHOD']!='POST'){
     $_SESSION["error"]="Brak dostępu";
-    header("location: index.php");
+    header("location: ../index.php");
     exit;
   }else{
     $flag=true;
@@ -57,5 +57,5 @@
   {
     $_SESSION['error']="Błąd podczas tworzenia konta przepraszamy za kłopot2";
   }
-    header("location: index.php");
+    header("location: ../index.php");
 ?>
