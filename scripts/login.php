@@ -37,7 +37,7 @@ try{
       }
       }else {
       $_SESSION["error"]="Błędne hasło";
-      //header("location: ../logowanie.php");
+      header("location: ../logowanie.php");
       exit;
     }
   }else
