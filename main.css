@@ -5,7 +5,7 @@ body {
   text-shadow: 1px 1px black;
 }
 .darker{
-  background-color:#666666;
+  background-color:#1a1a1a;
   margin-bottom: 5px;
   border-radius: 15px;
   border: 1px solid #111111;
@@ -15,7 +15,7 @@ body {
   padding-bottom: 10px;
 }
 .lighter{
- background-color:#999999;
+ background-color:#262626;
  margin-bottom: 5px;
  border-radius: 15px;
  border: 1px solid #111111;
@@ -24,12 +24,51 @@ body {
  padding-top: 10px;
  padding-bottom: 10px;
 }
+.com-button
+{
+  padding-left: 0px;
+}
+.com-button>a{
+  color:#9d9d9d;
+}
+.com-button>a:active{
+  color:#f2f2f2;
+}
+.com-button>a:hover{
+  text-decoration: none;
+  color:#f2f2f2;
+}
 #shift{
   padding-top:0px;
 }
 #loggedShift{
   padding-top:0px;
 }
+/** Bootstrap Dark Modal Styles **/
+.modal-open .modal, .btn:focus {
+    outline: none !important;
+}
+
+.modal.dark .modal-body {
+  background: #40464b;
+}
+
+.modal.dark .modal-header {
+  background: #2d3032;
+  border-bottom: 1px solid #2a2c2e;
+}
+.modal.dark .modal-header h1, .modal.dark .modal-header h2, .modal.dark .modal-header h3, .modal.dark .modal-header h4 {
+  color: #ccc;
+}
+
+.modal.dark .modal-footer {
+  background: #2d3032;
+  border-top: 1px solid #2a2c2e;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
 @media screen and (max-width: 895px) {
  #shift{
    padding-top:40px;
