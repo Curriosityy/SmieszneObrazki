@@ -26,7 +26,7 @@
                   <div class="col-sm-12 myButtons" style="display: none;">
                     <ul class="list-inline showImageUnderText" style="display: none;">
                       <li>
-                        <img class="img-rounded obrazekImg" height="55" src="" alt="miniaturka">
+                        <img class="img-rounded obrazekImg" src="anon.jpg" height="55" alt="miniaturka">
                       </li>
                       <li>
                         <p class="img-url"></p>
@@ -52,6 +52,7 @@
                  </div>
               </div>
            </div>
+           <input type="hidden" class="cpostPhotoUrl"name="postPhotoUrl" value="">
           </form>
           <!-- Modal -->
             <div id="myModal" class="modal fade dark" role="dialog">
@@ -89,15 +90,17 @@
           $(".myButtons").show(400);
         });
         $(".deletePhoto").click(function(){
-          $(".showImageUnderText").hide();
-          $(".img-url").text("");
-          $(".obrazekImg").attr("src","");
+          $(".showImageUnderText").hide(200);
+          $(".cpostPhotoUrl").val("");
+          //$(".img-url").text("");
+          //$(".obrazekImg").attr("src","anon.png");
         });
         $(".anuluj").click(function() {
           $(".postarea").val("");
-          $(".img-url").text("");
-          $(".obrazekImg").attr("src","");
-          $(".showImageUnderText").hide();
+          $(".cpostPhotoUrl").val("");
+          //$(".img-url").text("");
+          //$(".obrazekImg").attr("src","anon.png");
+          $(".showImageUnderText").hide(200);
           $(".myButtons").hide(400);
         });
         $(".close-modal").click(function() {
@@ -115,10 +118,12 @@
               {
                 if(html=='isImage')
                 {
+                  $(".cpostPhotoUrl").val($("#obrazek").val());
                   $(".img-url").text($("#obrazek").val());
                   $(".obrazekImg").attr("src",$("#obrazek").val());
                   $(".showImageUnderText").show(200);
                   $("#myModal").modal("hide");
+                  $("#obrazek").val("");
                 }else {
                   confirm("To nie jest obrazek");
                 }
