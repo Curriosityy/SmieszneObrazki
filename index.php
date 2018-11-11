@@ -8,7 +8,7 @@
   <?php include_once("privateNode/navbar.php")?>
     <div class="container" >
         <div class="darker row">
-          <form class="form-horizontal" action="addPost.php" method="post">
+          <form class="form-horizontal" action="scripts/addPost.php" method="post">
             <div class="form-group" style="margin-bottom:0px;">
              <label class="control-label col-sm-1">
               <?php if($_SESSION['logged']==true)
@@ -21,7 +21,7 @@
              </label>
               <div class="col-sm-11 container">
                 <div class="col-sm-12">
-                  <textarea class="form-control postarea" rows="3"></textarea>
+                  <textarea class="form-control postarea" rows="3" name="postText" minlength="6" required></textarea>
                 </div>
                   <div class="col-sm-12 myButtons" style="display: none;">
                     <ul class="list-inline showImageUnderText" style="display: none;">
@@ -43,7 +43,7 @@
                         <label class="checkbox-inline com-button"><a class="anuluj"><span class="glyphicon glyphicon-remove"></span> Anuluj</a></label>
                       </li>
                       <li>
-                        <label class="checkbox-inline"><input type="checkbox" value="anonim" <?php if($_SESSION['logged']!=true) echo "disabled checked"; ?>>Anonimomo</label>
+                        <label class="checkbox-inline"><input type="checkbox" name="anonPosting" <?php if($_SESSION['logged']!=true) echo "checked disabled><input type='hidden' class='cpostPhotoUrl' name='anonPosting' value='on'>"; ?>Anonimomo</label>
                       </li>
                       <li>
                         <label class="checkbox-inline com-button"><a data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-camera"></span></a></label>
