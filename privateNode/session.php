@@ -8,7 +8,7 @@
     </script>
     ";
     $_SESSION['logged']=false;
-    $_SESSION['nickname']='';
+    $_SESSION['login']='Anonim';
     $_SESSION['admin']=false;
     $_SESSION['moderator']=false;
     $_SESSION['miniatura']='anon.png';

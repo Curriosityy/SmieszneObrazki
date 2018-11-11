@@ -43,7 +43,7 @@
                         <label class="checkbox-inline com-button"><a class="anuluj"><span class="glyphicon glyphicon-remove"></span> Anuluj</a></label>
                       </li>
                       <li>
-                        <label class="checkbox-inline"><input type="checkbox" name="anonPosting" <?php if($_SESSION['logged']!=true) echo "checked disabled><input type='hidden' class='cpostPhotoUrl' name='anonPosting' value='on'>"; ?>Anonimomo</label>
+                        <label class="checkbox-inline"><input type="checkbox" value='on' name="anonPosting" <?php if($_SESSION['logged']!=true) echo "checked disabled><input type='hidden' name='anonPosting' value='on'>"; ?>Anonimomo</label>
                       </li>
                       <li>
                         <label class="checkbox-inline com-button"><a data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-camera"></span></a></label>
