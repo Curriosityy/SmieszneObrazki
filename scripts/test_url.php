@@ -5,11 +5,11 @@ if($_SERVER['REQUEST_METHOD']!='POST'){
   header("location: ../index.php");
   exit;
 }else{
-if(@getimagesize($_POST["imgUrl"]))
-{
-  echo 'isImage';
-}else{
-  echo 'notImage';
-}
+  if(@getimagesize($_POST["imgUrl"]))
+  {
+    echo 'isImage';
+  }else{
+    echo 'notImage';
+  }
 }
 ?>

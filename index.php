@@ -52,7 +52,7 @@
                  </div>
               </div>
            </div>
-           <input type="hidden" class="cpostPhotoUrl"name="postPhotoUrl" value="">
+           <input type="hidden" class="cpostPhotoUrl" name="postPhotoUrl" value="">
           </form>
           <!-- Modal -->
             <div id="myModal" class="modal fade dark" role="dialog">
