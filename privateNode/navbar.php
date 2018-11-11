@@ -53,9 +53,9 @@
         echo '<li><a href="logout.php"><span class="glyphicon glyphicon-lock"></span> Wyloguj</a></li>';
         if($_SERVER['PHP_SELF']=="/stronkaMemka/profil.php")
         {
-          echo '<li class="active"><a href="profil.php" style="padding:1px;"><img href="profil.php" class="img-circle" height="48" src="'.$_SESSION["miniatura"].'" alt="miniaturka"></a></li>';
+          echo '<li class="active"><a href="profil.php" style="padding:1px;"><img class="img-circle" height="48" src="'.$_SESSION["miniatura"].'" alt="miniaturka"></a></li>';
         }else {
-          echo '<li><a href="profil.php" style="padding:1px;"><img href="profil.php" class="img-circle" height="48" src="'.$_SESSION["miniatura"].'" alt="miniaturka"></a></li>';
+          echo '<li><a href="profil.php" style="padding:1px;"><img class="img-circle" height="48" src="'.$_SESSION["miniatura"].'" alt="miniaturka"></a></li>';
         }
       }else{
         if($_SERVER['PHP_SELF']=="/stronkaMemka/rejestracja.php")
