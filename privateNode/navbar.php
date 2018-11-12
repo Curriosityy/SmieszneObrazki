@@ -5,15 +5,15 @@
     </div>
     <ul class="nav navbar-nav">
       <?php
-       if($_SERVER['PHP_SELF']=="/stronkaMemka/index.php"){
+       if($_SERVER['PHP_SELF']=="/stronkaMemka/index.php" && isset($_GET['sort']) && $_GET['sort']=='hot'){
         echo '<li class="active"><a href="index.php">Gorące</a></li>';
       }else{
         echo '<li><a href="index.php">Gorące</a></li>';
       }
-      if($_SERVER['PHP_SELF']=="/stronkaMemka/wszystkie.php"){
-        echo '<li class="active"><a href="wszystkie.php">Wszystkie</a></li>';
+      if($_SERVER['PHP_SELF']=="/stronkaMemka/index.php" && isset($_GET['sort']) && $_GET['sort']=='all'){
+        echo '<li class="active"><a href="/stronkaMemka/index.php?sort=all">Wszystkie</a></li>';
       }else{
-        echo '<li><a href="wszystkie.php">Wszystkie</a></li>';
+        echo '<li><a href="/stronkaMemka/index.php?sort=all">Wszystkie</a></li>';
       }
       if($_SESSION["logged"]!=false)
         if($_SERVER['PHP_SELF']=="/stronkaMemka/ulubione.php"){

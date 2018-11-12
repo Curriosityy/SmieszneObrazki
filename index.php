@@ -1,5 +1,12 @@
 <!DOCTYPE html>
-<?php include_once("privateNode/session.php")?>
+<?php
+  if($_SERVER['PHP_SELF']=="/stronkaMemka/index.php" && !isset($_GET['sort']))
+  {
+    header("location: index.php?sort=hot&time=12");
+    exit();
+  }
+ include_once("privateNode/session.php")
+ ?>
 <html lang="en">
 <head>
   <?php include_once("privateNode/head.php")?>
@@ -15,7 +22,7 @@
               {
                 echo '<a href="profil.php" style="padding:1px;"><img class="img-circle" height="55" src="'.$_SESSION["miniatura"].'" alt="miniaturka"></a>';
               } else {
-                echo '<img class="img-circle" height="55" src="anon.png" alt="miniaturka">';
+                echo '<img class="img-circle" height="55" src="'.$_SESSION["miniatura"].'" alt="miniaturka">';
               }
               ?>
              </label>
@@ -55,31 +62,52 @@
            <input type="hidden" class="cpostPhotoUrl" name="postPhotoUrl" value="">
           </form>
           <!-- Modal -->
-            <div id="myModal" class="modal fade dark" role="dialog">
-              <div class="modal-dialog">
-                <!-- Modal content-->
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Dodaj zdjęcie</h4>
-                  </div>
-                  <div class="modal-body">
-                    <form>
-                      <div class="form-group">
-                        <label>Link obrazka:</label>
-                        <input type="url" class="form-control" id="obrazek" required>
-                      </div>
-                      <button type="button" class="btn btn-default test-img-url">Dodaj obrazek</button>
-                    </form>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-default close-modal" data-dismiss="modal">Close</button>
-                  </div>
+          <div id="myModal" class="modal fade dark" role="dialog">
+            <div class="modal-dialog">
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">Dodaj zdjęcie</h4>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="form-group">
+                      <label>Link obrazka:</label>
+                      <input type="url" class="form-control" id="obrazek" required>
+                    </div>
+                    <button type="button" class="btn btn-default test-img-url">Dodaj obrazek</button>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default close-modal" data-dismiss="modal">Close</button>
                 </div>
               </div>
             </div>
+          </div>
         </div>
-        <div class="lighter row">postpost</div>
+
+        <div class="lighter row">
+          <?php
+            if(!isset($_GET['sort']) || $_GET['sort']!='hot' || $_GET['sort']!='all')
+            {
+              $_SESSION['error']="nie właściwa metoda sortowania";
+              header('location: index.php');
+              exit();
+            }
+            if(!isset($_GET['page']))
+            {
+              $_GET['page']=1;
+            }
+
+            if($_GET['sort']=='hot')
+            {
+              include_once("privateNode/showHot.php");
+            }else{
+              include_once("privateNode/showAll.php");
+            }
+          ?>
+        </div>
       </div>
     <script>
     function isUrlValid(url) {
