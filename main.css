@@ -7,7 +7,7 @@ body {
 .darker{
   background-color:#1a1a1a;
   margin-bottom: 5px;
-  border-radius: 15px;
+  border-radius: 5px;
   border: 1px solid #111111;
   padding-left: 20px;
   padding-right: 20px;
@@ -17,7 +17,7 @@ body {
 .lighter{
  background-color:#262626;
  margin-bottom: 5px;
- border-radius: 15px;
+ border-radius: 5px;
  border: 1px solid #111111;
  padding-left: 20px;
  padding-right: 20px;
@@ -68,7 +68,18 @@ body {
   -moz-box-shadow: none;
   box-shadow: none;
 }
-
+.przycisk{
+    color:#9d9d9d;
+    text-align: center;
+}
+.przycisk:active{
+    color:#f2f2f2;
+}
+.przycisk:hover{
+    text-decoration: none;
+    color:#f2f2f2;
+    background-color: #080808;
+}
 @media screen and (max-width: 895px) {
  #shift{
    padding-top:40px;
