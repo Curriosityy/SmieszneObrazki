@@ -10,6 +10,7 @@
 <html lang="en">
 <head>
   <?php include_once("privateNode/head.php")?>
+  <script type="text/javascript" src="jsScript/underPost.js"></script>
 </head>
 <body>
   <?php include_once("privateNode/navbar.php")?>

@@ -28,9 +28,9 @@
           echo '<li><a href="sledzone.php">Śledzone tagi</a></li>';
         }
       if($_SERVER['PHP_SELF']=="/stronkaMemka/szukaj.php"){
-        echo '<li class="active"><a id="wyszukajButton" href="#">Szukaj</a></li>';
+        echo '<li class="active"><a id="wyszukajButton" href="#!">Szukaj</a></li>';
       } else {
-        echo '<li><a id="wyszukajButton" href="#">Szukaj</a></li>';
+        echo '<li><a id="wyszukajButton" href="#!">Szukaj</a></li>';
       }
       ?>
       <li>

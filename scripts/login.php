@@ -11,7 +11,7 @@ if($_SERVER['REQUEST_METHOD']!='POST'){
 try{
   $pdo = new PDO('mysql:host=localhost;dbname=stronkamemka;charset=utf8', 'root', '');
   $pdo->query("SET NAMES utf8");
-  $prep = $pdo->prepare("SELECT password, status, image FROM users WHERE login=:login");
+  $prep = $pdo->prepare("SELECT id, password, status, image FROM users WHERE login=:login");
   $prep->execute([':login'=>$login]);
   if($prep->rowCount()==1)
   {
@@ -23,6 +23,7 @@ try{
       $_SESSION['logged']=true;
       $_SESSION['login']=$login;
       $_SESSION['miniatura']=$row['image'];
+      $_SESSION['ID']=$row['id'];
       if($row['status']==1)
       {
         $_SESSION['banned']=true;

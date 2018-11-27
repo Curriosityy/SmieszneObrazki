@@ -8,6 +8,7 @@
     </script>
     ";
     $_SESSION['logged']=false;
+    $_SESSION['ID']=0;
     $_SESSION['login']='Anonim';
     $_SESSION['admin']=false;
     $_SESSION['moderator']=false;

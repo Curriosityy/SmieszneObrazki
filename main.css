@@ -68,7 +68,7 @@ body {
   -moz-box-shadow: none;
   box-shadow: none;
 }
-.przycisk{
+.przycisk, .przycisk:focus{
     color:#9d9d9d;
     text-align: center;
 }
@@ -76,9 +76,22 @@ body {
     color:#f2f2f2;
 }
 .przycisk:hover{
-    text-decoration: none;
     color:#f2f2f2;
     background-color: #080808;
+}
+.przycisk2, .przycisk2:focus{
+    color:#3ea6ff;
+    text-align: center;
+}
+.przycisk2:active, {
+    color:#006dcc;
+}
+.przycisk2:hover{
+    color:#006dcc;
+    background-color: #080808;
+}
+a, a:hover, a:active, a:visited, a:focus {
+    text-decoration:none;
 }
 @media screen and (max-width: 895px) {
  #shift{
