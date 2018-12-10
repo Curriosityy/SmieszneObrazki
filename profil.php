@@ -13,7 +13,8 @@
         <?php if($_SESSION["admin"]==true || $_SESSION["moderator"]==true)
         {
           echo '<a href="/stronkaMemka/zgloszenia.php" class="">Przegląd zgłoszonych postów</a></br>';
-          echo '<a href="/stronkaMemka/anonimy.php" class="">Przegląd anonimowych postów</a>';
+          echo '<a href="/stronkaMemka/anonimy.php" class="">Przegląd anonimowych postów</a></br>';
+          echo '<a href="/stronkaMemka/banuj.php" class="">Banuj urzytkowników</a>';
         }
         ?>
       </div>
