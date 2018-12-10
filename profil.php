@@ -8,6 +8,14 @@
   <?php include_once("privateNode/navbar.php")?>
     <div class="container" >
       <div class="row">
+        <?php if($_SESSION["admin"]==true) echo '<a href="/stronkaMemka/moderate.php" class="">Nadaj uprawnienia moderatorskie</a> </br>'; ?>
+
+        <?php if($_SESSION["admin"]==true || $_SESSION["moderator"]==true)
+        {
+          echo '<a href="/stronkaMemka/zgloszenia.php" class="">Przegląd zgłoszonych postów</a></br>';
+          echo '<a href="/stronkaMemka/anonimy.php" class="">Przegląd anonimowych postów</a>';
+        }
+        ?>
       </div>
     </div>
 </body>

@@ -62,8 +62,8 @@
            </div>
            <input type="hidden" class="cpostPhotoUrl" name="postPhotoUrl" value="">
           </form>
-          <!-- Modal -->
         </div>
+        <!-- Modal -->
         <div id="myModal" class="modal fade dark" role="dialog">
           <div class="modal-dialog">
             <!-- Modal content-->
@@ -87,6 +87,38 @@
             </div>
           </div>
         </div>
+        <!-- Modal -->
+        <!-- report Modal -->
+        <div id="reportModal" class="modal fade dark" role="dialog">
+          <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Reportuj</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="radio">
+                    <label><input type="radio" name="optradio" id="obrUczuc" checked>Obraza uczuć relijnych</label>
+                  </div>
+                  <div class="radio">
+                    <label><input type="radio" name="optradio" id="inne">Inne</label>
+                  </div>
+                  <div class="form-group">
+                    <br>
+                    <label for="comment">W przypadku inne proszę o dokładne opisanie naruszenia:</label>
+                    <textarea class="form-control" rows="5" id="addicInfo"></textarea>
+                  </div>
+                  <button class="btn btn-default" onclick="reportAjax(this);" data-dismiss="modal"><span class="glyphicon glyphicon-send"></span> Wyślij</button>
+                  <input type="hidden" id="hiddenPostID" name="postID" value="">
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default close-modal" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Modal -->
           <?php
             if(!isset($_GET['sort']) || ($_GET['sort']!='hot' && $_GET['sort']!='all'))
             {
@@ -152,6 +184,7 @@
           // hide modal
         });
       });
+
     </script>
 </body>
 </html>
