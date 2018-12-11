@@ -18,7 +18,10 @@
     }
     $prep = $pdo->prepare("SELECT COUNT(*) FROM upvoted_posts WHERE post_id=:post_id");
     $prep->execute([':post_id'=>$post_ID]);
-    echo $prep->fetch()[0];
+    $count = $prep->fetch()[0];
+    echo $count;
+    $prep = $pdo->prepare("UPDATE posts SET up_vote=:cou WHERE id=:post_id");
+    $prep->execute([':cou'=>$count,':post_id'=>$post_ID]);
   }catch(PDOException $e)
   {
 
